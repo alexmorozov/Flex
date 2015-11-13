@@ -32,7 +32,7 @@
   <meta name="description" content="{{ SITEDESCRIPTION }}" />
   {% include "partial/og.html" %}
   {% endblock %}
-  <title>{{ SITENAME }}{% block title %}{% endblock %}</title>
+  <title>{% block title_wrapper %}{% block title %}{% endblock %}. {{ SITENAME }}{% endblock %}</title>
 </head>
 <body>
   {% include "partial/gtm.html" %}

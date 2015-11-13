@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% set summarise = True %}
 
+{% block title_wrapper %}{{ SITENAME }}: {{ SITESUBTITLE }}{% endblock %}
+
 {% block content %}
 {% for article in articles_page.object_list %}
 <article>
