@@ -2,6 +2,12 @@
 {% set summarise = True %}
 
 {% block title_wrapper %}{{ SITENAME }}: {{ SITESUBTITLE }}{% endblock %}
+{% block meta %}
+    {{ super() }}
+    {% if GOOGLE_SITE_VERIFICATION %}
+    <meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}" />
+    {% endif %}
+{% endblock %}
 
 {% block content %}
 {% for article in articles_page.object_list %}
